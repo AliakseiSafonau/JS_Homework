@@ -3,21 +3,21 @@
 function filterNumbersArr(numbers) {
 
 
-    return numbers.forEach(function (number) {
+    return numbers.filter(function (number) {
         return number > 0;
     });
 }
 
 filterNumbersArr([-1, 0, 2, 34, -2]);
 
-/******** Задачв № 2 ********/
+/******** Задача № 2 ********/
 
 function firstPositiveNumber(numbers) {
 
-    var PositiveNumber = numbers.filter(function (number) {
+    var positiveNumber = numbers.filter(function (number) {
         return number > 0;
     });
-    return PositiveNumber[0];
+    return positiveNumber[0];
 }
 
 firstPositiveNumber([-1, 0, 2, 34, -2]);
@@ -33,7 +33,7 @@ function firstPositiveNumber(numbers) {
 
 firstPositiveNumber([-1, 0, 2, 34, -2]);
 
-/******** Задачв № 3 ********/
+/******** Задача № 3 ********/
 
 function isPalindrome(word) {
 
@@ -44,17 +44,15 @@ function isPalindrome(word) {
 console.log(isPalindrome('шалаШ'));
 console.log(isPalindrome('привет'));
 
-/******** Задачв № 4 ********/
+/******** Задача № 4 ********/
 
 function areAnagrams(word1,word2) {
+    var length = 0;
 
     if ( word1.length !== word2.length) return false;
 
-    var massifWord2 = word2.toLowerCase().split("");
-    var length = 0;
-
     for ( var i = 0; i < word1.length; i++){
-        if (word1.toLowerCase().includes(massifWord2[i])) {
+        if (word1.toLowerCase().indexOf(word2.slice(i,i+1)) > -1) {
             length++;
         }
     }
@@ -65,16 +63,16 @@ console.log(areAnagrams('кот', 'отк'));
 console.log(areAnagrams('кот', 'атк'));
 console.log(areAnagrams('кот', 'отко'));
 
-/******** Задачв № 5 ********/
+/******** Задача № 5 ********/
 
-function divideArr(massif,interval) {
-    var newMassif = [];
+function divideArr(arr,span) {
+    var newArr = [];
 
-    for ( var i = 0; i < Math.ceil(massif.length/interval); i++) {
-        newMassif[i] = massif.slice(i*interval,i*interval+interval);
+    for ( var i = 0; i < Math.ceil(arr.length/span); i++) {
+        newArr[i] = arr.slice(i*span,i*span+span);
     }
 
-    return newMassif;
+    return newArr;
 }
 console.log(divideArr([1, 2, 3, 4], 2));
 console.log(divideArr([1, 2, 3, 4, 5, 6, 7, 8], 3));
