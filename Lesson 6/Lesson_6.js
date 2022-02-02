@@ -51,6 +51,3 @@ var barsik = new Cat('Барсик');
 console.log(animal.feed());
 console.log(barsik.name);
 barsik.stroke().feed().feed().stroke();
-
-
-
