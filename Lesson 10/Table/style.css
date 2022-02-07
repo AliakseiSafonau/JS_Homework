@@ -1,0 +1,16 @@
+table{
+    border-collapse: collapse;
+    width: 600px;
+}
+td{
+    border: 1px solid black;
+    height: 30px;
+    width: 200px;
+}
+.content{
+    text-align: center;
+    font-weight: bold;
+}
+input{
+    width: 96%;
+}
