@@ -1,0 +1,31 @@
+.numberX {
+    display: inline;
+    margin-left: 10px;
+
+}
+.numberY {
+    display: inline;
+    margin-left: 10px;
+}
+#valueX {
+    margin-left: 10px;
+}
+#valueY {
+    margin-left: 12px;
+}
+#button{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+table{
+    border: 1px solid black;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 48px;
+}
+td{
+
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+}
