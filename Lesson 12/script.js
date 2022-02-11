@@ -5,7 +5,7 @@ function examUsersData() {
 function rec() {
     var container = new XMLHttpRequest();
 
-    container.open('GET', 'https://reqres.in//users?page=2');
+    container.open('GET', 'https://reqres.in/api/users?page=2');
     container.send();
     container.onload = function () {
         var statusType = Math.round(this.status / 100);
